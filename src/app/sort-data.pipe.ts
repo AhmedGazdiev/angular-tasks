@@ -1,0 +1,20 @@
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'sortData',
+  pure: false,
+})
+export class SortDataPipe implements PipeTransform {
+  transform(arr: any[], property: string): any[] {
+    arr.sort((a: any, b: any) => {
+      if (a[property] < b[property]) {
+        return -1;
+      } else if (a[property] > b[property]) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+    return arr;
+  }
+}

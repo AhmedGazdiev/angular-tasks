@@ -1,1 +1,15 @@
 <p>app works!</p>
+
+<p>{{ "fsdfsfsfsfsf" | uppercase }}</p>
+<p>{{ "SDSDSDSDSDSD" | lowercase }}</p>
+
+<p>
+  {{
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem perferendis ut eaque corrupti assumenda doloribus non aperiam blanditiis unde. Ratione quibusdam aperiam odio explicabo esse necessitatibus perferendis pariatur quam officiis!"
+      | cutText : 55
+  }}
+</p>
+
+<p>
+  {{ ageOfUsers | sortData : "age" | json }}
+</p>
