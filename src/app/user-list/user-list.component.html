@@ -1,1 +1,5 @@
-<p>user-list works!</p>
+<p>Имя пользователя: {{ userName }}</p>
+<img [src]="userPicUrl" alt="Фото" />
+<button (click)="deleteUser()">Удалить</button>
+<input [(ngModel)]="name" />
+<p>Имя: {{ name }}</p>

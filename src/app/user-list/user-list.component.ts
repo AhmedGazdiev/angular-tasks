@@ -1,28 +1,17 @@
-import {
-  Component,
-  OnChanges,
-  OnDestroy,
-  OnInit,
-  SimpleChanges,
-} from '@angular/core';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-user-list',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss',
 })
-export class UserListComponent implements OnInit, OnDestroy, OnChanges {
-  ngOnInit() {
-    console.log('ngOnInit: компонент инициализирован');
-    // Здесь можно, например, загрузить пользователей из сервиса
+export class UserListComponent {
+  userName: string = 'Расомаха';
+  userPicUrl = '/favicon.ico';
+  deleteUser() {
+    console.log('Пользователь удалён');
   }
-
-  ngOnDestroy() {
-    console.log('ngOnDestroy: компонент будет уничтожен');
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    console.log('ngOnChanges: входные свойства изменились', changes);
-  }
+  name = '';
 }
