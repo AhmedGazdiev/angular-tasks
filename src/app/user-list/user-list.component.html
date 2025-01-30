@@ -1,6 +1,7 @@
-<app-user-card
-  *ngFor="let u of users"
-  [user]="u"
-  (userDeleted)="onUserDeleted()"
-></app-user-card>
-<button (click)="onUserDeleted()">delete</button>
+<p>user-list works!</p>
+
+<div *ngFor="let user of users">
+  <p>{{ user.name }}</p>
+  <p>{{ user.age }}</p>
+  <hr />
+</div>

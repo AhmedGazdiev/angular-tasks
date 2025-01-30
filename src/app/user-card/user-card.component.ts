@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-user-card',
@@ -6,12 +6,4 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './user-card.component.html',
   styleUrl: './user-card.component.scss',
 })
-export class UserCardComponent {
-  @Input() user!: { id: number; name: string };
-
-  @Output() userDeleted = new EventEmitter<void>();
-
-  deleteUser() {
-    this.userDeleted.emit();
-  }
-}
+export class UserCardComponent {}
