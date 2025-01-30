@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'app-user-list',
@@ -6,9 +12,17 @@ import { Component } from '@angular/core';
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss',
 })
-export class UserListComponent {
-  users = [
-    { id: 1, name: 'Иван Петров' },
-    { id: 2, name: 'Светлана Сидорова' },
-  ];
+export class UserListComponent implements OnInit, OnDestroy, OnChanges {
+  ngOnInit() {
+    console.log('ngOnInit: компонент инициализирован');
+    // Здесь можно, например, загрузить пользователей из сервиса
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy: компонент будет уничтожен');
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges: входные свойства изменились', changes);
+  }
 }
