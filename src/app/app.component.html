@@ -6,6 +6,8 @@
   culpa eaque repellat quaerat quae eius dolores facilis rerum placeat!
 </p> -->
 
+<!-- новый синтаксис -->
+
 @if (toggler) {
 <p>
   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est obcaecati
@@ -21,7 +23,22 @@
   <p>{{ user.id }}</p>
 </div> -->
 
+<!-- новый синтаксис -->
+
 @for (user of users; track user.id) {
 <p>{{ user.name }}</p>
 <p>{{ user.id }}</p>
 }
+<!-- прмер использования структурной директивы -->
+<p appCustom style="color: yellow" class="color" [color]="colorProperty">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+</p>
+
+<!-- пример использования аттрибутной директивы -->
+<p *appCustom2="toggler">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+</p>
+<div [appHighlight]="'lightblue'">Наведи на меня, чтобы подсветить!</div>
+<button *appShowForRoles="['admin', 'moderator']">
+  Заблокировать пользователя
+</button>
