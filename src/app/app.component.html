@@ -1,1 +1,27 @@
 <p>app works!</p>
+
+<!-- <p *ngIf="toggler">
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est obcaecati
+  facere, fuga esse laudantium maiores, molestiae exercitationem, harum ex dolor
+  culpa eaque repellat quaerat quae eius dolores facilis rerum placeat!
+</p> -->
+
+@if (toggler) {
+<p>
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est obcaecati
+  facere, fuga esse laudantium maiores, molestiae exercitationem, harum ex dolor
+  culpa eaque repellat quaerat quae eius dolores facilis rerum placeat!
+</p>
+}
+
+<button (click)="toggler = !toggler">toggle</button>
+
+<!-- <div *ngFor="let user of users">
+  <p>{{ user.name }}</p>
+  <p>{{ user.id }}</p>
+</div> -->
+
+@for (user of users; track user.id) {
+<p>{{ user.name }}</p>
+<p>{{ user.id }}</p>
+}
