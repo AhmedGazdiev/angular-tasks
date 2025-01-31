@@ -1,8 +1,16 @@
 <p>app works!</p>
 
-<p #paragraph>просто параграф</p>
+<!-- <p #paragraph>просто параграф</p>
 
 <ng-template #template> содержимое внутри ng-template </ng-template>
 <ng-container *ngTemplateOutlet="template" />
 
-<app-child> содержимое внутри дочернего компонента app-child </app-child>
+<app-child> содержимое внутри дочернего компонента app-child </app-child> -->
+
+<app-child>обычный текст</app-child>
+<app-child>
+  <p #tag>парагрф</p>
+</app-child>
+<app-child>
+  <ng-template #name> элемент ng-template </ng-template>
+</app-child>
