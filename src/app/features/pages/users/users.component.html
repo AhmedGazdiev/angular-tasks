@@ -1,0 +1,15 @@
+<ng-container *ngFor="let user of users">
+  <div>
+    <app-card>
+      <img [src]="user.avatar" alt="user avatar">
+      <div class="card_right">
+        <h4>{{ user.name }}</h4>
+        <span class="status" [customHover]="user.status">status: {{ user.status }}</span>
+        <button class="btn" (click)="toggleUser(user.id)">switch</button>
+      </div>
+    </app-card>
+  </div>
+</ng-container>
+
+
+<button class="btn" (click)="updateUser('Вася Пупкин', 45,'online')">Обновить пользователя</button>

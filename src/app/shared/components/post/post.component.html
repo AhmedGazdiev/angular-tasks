@@ -1,0 +1,19 @@
+<div class="post">
+  <h3>{{ post.title }}</h3>
+  <p>{{ post.content | cutText }}</p>
+  <div class="bottom">
+    <button class="btn" (click)="like(post.id)">like</button>
+    <span *showIfLiked="Boolean(post.likes)">likes: {{ post.likes }}</span>
+    <ng-template #templateElse>
+      <p (click)="isShowComment = !isShowComment">comments</p>
+    </ng-template>
+  </div>
+  <ng-container *ngIf="isShowComment; else templateElse">
+    <div (click)="isShowComment = !isShowComment" class="comments">
+      <p>the comments are empty</p>
+    </div>
+  </ng-container>
+</div>
+
+
+

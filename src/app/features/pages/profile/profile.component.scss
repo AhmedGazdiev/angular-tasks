@@ -1,0 +1,24 @@
+.profile_container {
+  padding: 0 15px 20px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  min-width: 800px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  img {
+    width: 150px;
+    border-radius: 100%;
+    border: 1px solid #000;
+  }
+}
+
+.profile_right{
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}

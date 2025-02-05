@@ -1,0 +1,20 @@
+.post {
+  padding: 20px 15px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  width: 800px;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comments{
+  margin: 20px 0 20px 0;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  user-select: none;
+}
